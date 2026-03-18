@@ -1,4 +1,7 @@
 {
+  "buildCommand": "",
+  "outputDirectory": "public",
+  "installCommand": "npm install",
   "rewrites": [
     { "source": "/analyze", "destination": "/api/analyze" }
   ],
