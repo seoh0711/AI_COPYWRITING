@@ -148,7 +148,9 @@ ${targetNote}
 > **[단계명]**
 > 초안 작성 → 원칙 적용 후 개선 → 최종 문장
 
-(PAS라면 Problem/Agitate/Solve, BAB라면 Before/After/Bridge, FAB라면 Features/Advantages/Benefits)
+(FAB라면 Features/Advantages/Benefits, BAB라면 Before/After/Bridge, PAS라면 Problem/Agitate/Solve,
+AIDA라면 Attention/Interest/Desire/Action, PASTOR라면 Problem/Amplify/Story/Testimonials/Offer/Response,
+3S라면 Star/Story/Solution)
 
 반드시 지킬 것:
 - 각 단계에서 "개선 전 → 개선 후" 비교를 보여줄 것
