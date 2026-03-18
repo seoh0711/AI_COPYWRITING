@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 프로젝트 임시 파일
+.tmp/
+output/
+*.log
+export-log.json
+
+# 환경 설정 (로컬)
+.env
+.env.local
+
+# Node (혹시 사용 시)
+node_modules/
+package-lock.json
+
+# 빌드 결과물
+dist/
+build/

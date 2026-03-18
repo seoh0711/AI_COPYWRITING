@@ -1,0 +1,50 @@
+{
+  "project": {
+    "name": "AI_COPYWRITING",
+    "description": "COPYWRITING MADE System - AI 기반 카피라이팅 생성 시스템",
+    "version": "1.0.0",
+    "language": "ko"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(pip:*)",
+      "Bash(cat:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(mkdir:*)",
+      "Read",
+      "Write",
+      "Edit"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(sudo:*)"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "context": {
+    "include": [
+      "CLAUDE.md",
+      "manuscript/**/*.md",
+      "resources/references/**"
+    ],
+    "exclude": [
+      "node_modules/",
+      "__pycache__/",
+      ".git/",
+      "*.pyc"
+    ]
+  },
+  "copywriting": {
+    "frameworks": ["PAS", "BAB", "FAB"],
+    "process_steps": [
+      "emotion_attention",
+      "logic_retention",
+      "authority_action"
+    ],
+    "output_formats": ["markdown", "json", "html"],
+    "default_language": "ko",
+    "supported_languages": ["ko", "en", "ja"]
+  }
+}

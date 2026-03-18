@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(node -e \"import\\(''multer''\\).then\\(m => { console.log\\(Object.keys\\(m.default || m\\)\\) }\\).catch\\(e => console.error\\(e.message\\)\\)\")"
+    ]
+  },
+  "local": {
+    "environment": "development",
+    "debug": true,
+    "verbose_logging": true
+  },
+  "user": {
+    "name": "Seo",
+    "preferred_language": "ko",
+    "preferred_framework": "PAS",
+    "tone": "professional"
+  },
+  "paths": {
+    "manuscript_dir": "./manuscript",
+    "resources_dir": "./resources",
+    "output_dir": "./output",
+    "temp_dir": "./.tmp"
+  },
+  "ai": {
+    "temperature": 0.7,
+    "max_tokens": 4096,
+    "analysis_depth": "detailed",
+    "auto_review": true
+  },
+  "export": {
+    "default_format": "markdown",
+    "include_metadata": true,
+    "include_framework_tags": true
+  }
+}
