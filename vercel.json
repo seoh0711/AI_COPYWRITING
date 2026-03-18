@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    { "source": "/analyze", "destination": "/api/analyze" }
+  ],
+  "functions": {
+    "api/analyze.js": {
+      "maxDuration": 60,
+      "memory": 1024
+    }
+  }
+}
