@@ -162,10 +162,19 @@ app.post('/analyze', upload.array('files', 10), async (req, res) => {
       return buildFileInput(buffer, mimeType, f.originalname);
     });
 
+    const frameworkStages = {
+      PAS:    'Problem(문제) → Agitate(자극) → Solve(해결)',
+      BAB:    'Before(현재) → After(이후) → Bridge(연결)',
+      FAB:    'Features(기능) → Advantages(장점) → Benefits(혜택)',
+      AIDA:   'Attention(주목) → Interest(흥미) → Desire(욕망) → Action(행동)',
+      PASTOR: 'Problem(문제) → Amplify(증폭) → Story(스토리) → Transformation(변화) → Offer(제안) → Response(반응)',
+      '3S':   'Star(주인공) → Story(이야기) → Solution(해결)',
+    };
+
     const frameworkNote =
       framework !== 'auto'
-        ? `반드시 ${framework} 프레임워크를 사용하세요.`
-        : '파일 내용에 가장 적합한 프레임워크를 선택하세요.';
+        ? `반드시 **${framework}** 프레임워크만 사용하라. 다른 프레임워크는 절대 사용하지 마라.\n단계: ${frameworkStages[framework] ?? framework}`
+        : `파일 내용에 가장 적합한 프레임워크를 선택하라. 선택 가능한 프레임워크: ${Object.keys(frameworkStages).join(', ')}`;
 
     const targetNote = target ? `타겟 오디언스: ${target}` : '';
     const fileList   = files.map((f, i) => `${i + 1}. ${f.originalname} (${f.mimetype})`).join('\n');
@@ -200,9 +209,7 @@ ${targetNote}
 > **[단계명]**
 > 초안 작성 → 원칙 적용 후 개선 → 최종 문장
 
-(PAS라면 Problem/Agitate/Solve, BAB라면 Before/After/Bridge, FAB라면 Features/Advantages/Benefits,
-AIDA라면 Attention/Interest/Desire/Action, PASTOR라면 Problem/Amplify/Story/Transformation/Offer/Response,
-3S라면 Star/Story/Solution)
+(사용할 프레임워크 단계: ${frameworkStages[framework] ?? '선택한 프레임워크의 단계'})
 
 반드시 지킬 것:
 - 각 단계에서 "개선 전 → 개선 후" 비교를 보여줄 것
